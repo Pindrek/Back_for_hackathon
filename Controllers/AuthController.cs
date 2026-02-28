@@ -6,11 +6,9 @@ namespace Back_for_hackathon.Controllers;
 [Route("api")]
 public class AuthController : ControllerBase
 {
-    // HARDCODED (потім заміниш на норм auth)
+    // HARDcoded (хакатон)
     private const string HARD_LOGIN = "admin";
     private const string HARD_PASSWORD = "1234";
-
-    // Токен теж просто хардкод (мінімальний варіант)
     private const string HARD_TOKEN = "hackathon-super-token";
 
     public record LoginRequest(string Email, string Password);
@@ -20,7 +18,7 @@ public class AuthController : ControllerBase
     {
         if (req is null) return BadRequest();
 
-        // фронт шле { email, password } :contentReference[oaicite:2]{index=2}
+        // Фронт шле { email, password }
         if (req.Email == HARD_LOGIN && req.Password == HARD_PASSWORD)
         {
             return Ok(new
