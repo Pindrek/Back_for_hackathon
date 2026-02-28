@@ -1,0 +1,6 @@
+@Back_for_hackathon_HostAddress = http://localhost:5292
+
+GET {{Back_for_hackathon_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
